@@ -18,8 +18,7 @@ exception bubbles all the way out and the first request after an idle period
 
 This shard reopens `PG::Statement#perform_query` and `#perform_exec` to also
 rescue `OpenSSL::SSL::Error` and raise `DB::ConnectionLost`, enabling the pool
-to retry. Production-proven on the Writebook Marten deploy (see
-`deploy notes`).
+to retry. Production-proven on a Writebook Marten deploy.
 
 **Remove this shard once crystal-pg upstreams the fix.**
 
@@ -44,8 +43,7 @@ PostgreSQL backend (e.g., SQLite in development/test).
 
 ## Provenance
 
-Extracted from the Writebook Marten port (`a Marten app`). See
-`deploy notes` for the original context.
+Extracted from a production Writebook Marten port.
 
 ## License
 
