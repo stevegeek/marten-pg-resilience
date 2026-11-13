@@ -12,3 +12,12 @@ dependencies:
   pg:
     github: will/crystal-pg
     version: ~> 0.29
+
+development_dependencies:
+  ameba:
+    github: crystal-ameba/ameba
+    version: ~> 1.7.0
+
+targets:
+  ameba:
+    main: lib/ameba/bin/ameba.cr
